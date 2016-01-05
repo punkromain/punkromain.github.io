@@ -1,10 +1,10 @@
-// ==Userscript==
-// @name legendsgame_bot
-// @description бот для какой-то игры
-// @author vk.com/it256
-// @include http://trupgame.ru/*
-// ==/Userscript==
-(function(){
+// ==UserScript==
+// @name         trupbot
+// @description  test
+// @author       soloromail@gmail.com, Deimon, Ненчык-патыр, Старовер
+// @match        http://trupgame.ru/*
+// ==/UserScript==
+/* jshint -W097 */
 if(location.href.match('trupgame.ru')) {
 var i=0;
 var tx='';
@@ -66,5 +66,5 @@ legendsLink('http://trupgame.ru/?select=mb0&ataka', 5000);
 
 
 
-}}
+}
 )();
