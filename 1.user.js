@@ -67,4 +67,3 @@ legendsLink('http://trupgame.ru/?select=mb0&ataka', 5000);
 
 
 }
-)();
