@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<html>
+<head>
+<link rel="icon" type="image/png" href="img/icon.png">
+<meta content="text/html; charset=UTF-8" http-equiv="content-type">
+<title>Драконы: Калькулятор Селекции</title>
+</head>
+<style>
+body {
+		background: #000;
+		margin:0px;padding: 0px;
+}
+#body {
+	max-width: 320px;
+	margin: 5px auto;
+	background: #111;
+	padding: 15px 0px;
+	text-align: center;
+	font-weight: bold;
+	color: #fa0;
+}
+input[f] {
+	width: 20px;
+	text-align: center;
+	background: #666;
+	color: #fa0;
+	font-weight: bold;
+	border: none;
+}
+</style>
+
+<body>
+<div id="body">
+Драконы: Калькулятор селекции
+</div>
+<div id="body">
+	время селекции:<br>
+<input name="q" f> ч <input name="w" f> м <input name="e" f>%
+</div>
+<div id="body"onclick="oo()">
+<big id="oo" >Считать!</big>
+</div>
+<script>
+function returnDragon(t){
+	dr=new Array();
+	tm=new Array();
+	dr[0] = 'Дракон Огня';
+	tm[0] = 1;
+	dr[1] = 'Пепельный дракон';
+	tm[1] = 60;
+	dr[2] = 'Лавовый дракон';
+	tm[2] = 120;
+	dr[3] = 'Дымовой дракон';
+	tm[3] = 540;
+	dr[4] = 'Паровой дракон';
+	tm[4] = 360;
+	dr[5] = 'Весенний дракон';
+	tm[5] = 960;
+	dr[6] = 'Пузырьковый дракон';
+	tm[6] = 1080;
+	dr[7] = 'Дракон-саламандра';
+	tm[7] = 1260;
+	dr[8] = 'Песочный дракон';
+	tm[8] = 1320;
+	dr[9] = 'Угольный дракон';
+	tm[9] = 1350;
+	dr[10] = 'Пылающий дракон';
+	tm[10] = 780;
+	dr[11] = 'Дракон Природы';
+	tm[11] = 2;
+	dr[12] = 'Дракон водопада';
+	tm[12] = 1200;
+	dr[13] = 'Цветочный дракон';
+	tm[13] = 180;
+	dr[14] = 'Пушистый дракон';
+	tm[14] = 630;
+	dr[15] = 'Кувшинковый дракон';
+	tm[15] = 420;
+	dr[16] = 'Болотный дракон';
+	tm[16] = 1020;
+	dr[17] = 'Бамбуковый дракон';
+	tm[17] = 1140;
+	dr[19] = 'Дракон-друид';
+	tm[19] = 810;
+	dr[20] = 'Дракон-стрекоза';
+	tm[20] = 600;
+	dr[21] = 'Горный дракон';
+	tm[21] = 660;
+	dr[22] = 'Грязевой дракон';
+	tm[22] = 480;
+	dr[23] = 'Алмазный дракон';
+	tm[23] = 840;
+	dr[24] = 'Воздушный дракон';
+	tm[24] = 240;
+	dr[25] = 'Дождевой дракон';
+	tm[25] = 720;
+	dr[26] = 'Грозовой дракон';
+	tm[26] = 870;
+	dr[27] = 'Водный дракон';
+	tm[27] = 300;
+	dr[28] = 'Жемчужный дракон';
+	tm[28] = 900;
+dd='не знаю';
+for(i=0;i<=28;i++){
+	if(tm[i]==t) dd =  dr[i];
+}
+return dd;
+}
+function oo(){
+	q = +document.getElementsByName('q')[0].value;
+	w = +document.getElementsByName('w')[0].value;
+	e = +document.getElementsByName('e')[0].value;
+	td = ((q*60+w)/(100-e))*e+(q*60+w);
+	document.getElementById('oo').innerHTML=returnDragon(td);
+
+}
+</script>
+
+</body>
+</html>
